@@ -1,0 +1,83 @@
+<%- include("template/cabecera", {tituloweb: 'Pagina de Contacto'})%>
+<link rel="stylesheet" href="./css/contactos.css">
+
+    <div class="contactUs">
+        <div class="title">
+            <h2>Ponte en Contacto con Nosotros</h2>
+        </div>
+        <div class="box">
+            <!-- form -->
+            <div class="contact form">
+                <h3>Enviar un Mensaje</h3>
+                <form>
+                    <div class="formBox">
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Nombre :</span>
+                                <input type="text" placeholder="Nombre">
+                            </div>
+                            <div class="inputBox">
+                                <span>Apellido :</span>
+                                <input type="text" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Correo :</span>
+                                <input type="text" placeholder="correo@gmail.com">
+                            </div>
+                            <div class="inputBox">
+                                <span>Telefono :</span>
+                                <input type="text" placeholder="+51123456789">
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Mensaje :</span>
+                                <textarea placeholder="Escribe tu Mensaje ...."></textarea>
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputBox">
+                                <input type="submit" value="Enviar">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- info box -->
+            <div class="contact info">
+                <h3>Contact info</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><ion-icon name="location"></ion-icon></span>
+                        <p>Via Lactea 490, Santiago de Surco, Lima</p>
+                    </div>
+                    <div>
+                        <span><ion-icon name="mail"></ion-icon></span>
+                        <a href="mailto:AltaregGroup@outlook.es">AltaregGroup@outlook.es</a>
+                    </div>
+                    <div>
+                        <span><ion-icon name="call"></ion-icon></span>
+                        <a href="tel:+51973196049">+51 973 196 049</a>
+                    </div>
+                    <!-- Medios Sociales -->
+                    <ul class="sci">
+                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- info map -->
+            <div class=" contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.2844391444696!2d-76.97621136331158!3d-12.092669688197054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7afa2db8789%3A0xf2f3094b86aa052b!2sEdificio%20El%20Derby%2C%20Via%20L%C3%A1ctea%2C%20Lima%2015023!5e0!3m2!1ses-419!2spe!4v1698025424264!5m2!1ses-419!2spe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

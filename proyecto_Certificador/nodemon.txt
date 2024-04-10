@@ -1,0 +1,24 @@
+para ejecutar nodemon es:
+npx nodemon app.js
+
+//////////////
+
+para ver los puertos es: 
+192.168.1.108:3000/historia.html
+
+
+Emet codigos:
+Para comentar es ctrl+k ctrl+c
+para descomentar ctrl+k ctrl+u
+
+    <!-- div.contenedor#ejemeplo>ul>li*5{ejemplo} -->
+    <!-- div.contenedor#ejemeplo>ul>li*5>a>{hola} -->  
+    
+
+    <!-- div.row#myRowld>div.title#myTitleld>h1#myh1ld -->
+    <!-- div.row#myRowld>div.tittle#myTitled>h1#myh1ld>{hola} -->
+    <!-- div.contenedor#lista>div.cont1#lista2>h1#titulos>a{titulo} -->
+    <!-- div.contenedor#lista>div.cont1#lista2>h1#titulos>a{titulo} -->
+    <!-- div.contenedor#id>ul>li*5>a[href=#] -->
+
+
