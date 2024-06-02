@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LOGIN</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/standar.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="box-title">
+      <!-- <img src="./img/AltaredGroup.png" alt="" /> -->
+    </div>
+    <div class="divFrmLogin-outer">
+      <div class="divFrmLogin">
+        <div class="divFrmLogin-inner padding--48">
+          <span class="padding-bottom--15 center bold"
+            >Bienvenido</span
+          >
+          <form action="#">
+            <div class="campos padding-top--24">
+              <label for="usuario">Usuario :</label>
+              <input type="text" id="txtUsuario" name="txtUsuario" />
+            </div>
+            <div class="campos padding-top--24">
+              <div class="grid--50-50">
+                <label for="password">Contraseña :</label>
+                <div class="reset-pass">
+                  <a href="#">Olvidaste tu Contraseña?</a>
+                </div>
+              </div>
+              <div class="input-icon">
+                <input type="password" id="txtPassword" name="txtPassword" />
+                <i class="fa fa-eye" id="togglePassword"></i>
+              </div>
+            </div>
+            <div class="campos campos-checkbox padding-top--24">
+              <label for="checkbox">
+                <input type="checkbox" name="checkbox" /> Manténgase conectado
+              </label>
+            </div>
+            <div id="actualizar" class="campos padding-top--24">
+              <input type="button" onclick="login()" value="INGRESAR" />
+            </div>
+            <div class="campos">
+              <a class="ssolink" href="/registro"
+                >Crea cuenta nueva</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="./js/login.js"></script>
+  </body>
+</html>

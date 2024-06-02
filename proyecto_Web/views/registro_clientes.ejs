@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/standar.css">
+    <link rel="stylesheet" type="text/css" href="cliente.css">
+</head>
+
+<body>
+    <header>
+        <%- include("template/navbar_Facturacion", {tituloweb: 'Registro de Cliente'})%>
+    </header>
+
+    <div class="box-title">
+        <h1>REGISTRAR CLIENTES</h1>
+    </div>
+    <div id="divFrmCliente" class="divFormulario">
+        <div class="padding-horizontal--48">
+            
+            <form action="#">
+                <input type="text" id="txtId" name="txtId" hidden>
+                <div class="campos padding-top--24">
+                    <label for="txtNombre">NOMBRE</label>
+                    <input type="text" id="txtNombre" name="txtNombre">
+                </div>
+                <div class="campos padding-top--24">
+                    <label for="txtTelefono">TELEFONO</label>
+                    <input type="text" id="txtTelefono" name="txtTelefono"> 
+                </div>
+                <div class="campos padding-top--24">
+                    <label for="txtEmail">EMAIL</label>
+                    <input type="text" id="txtEmail" name="txtEmail">
+                </div>
+                <div class="campos padding-top--24">
+                    <label for="txtDireccion">DIRECCION</label>
+                    <input type="text" id="txtDireccion" name="txtDireccion">
+                </div>                
+                <div class="campos campos-checkbox padding-top--24">
+                    <label for="cboEstado">
+                        <input type="checkbox" id="chkEstado" name="chkEstado" />Estado
+                    </label>
+                </div>
+                <div id="grabar" class="campos padding-top--24">
+                    <input type="button" id="btnGrabar"  onclick="guardarCliente();" value="GRABAR">  
+                </div>
+                <div id="grabar" class="campos padding-top--24">
+                    <input type="button" id="btnActualizar"  onclick="actualizarCliente();" value="ACTUALIZAR" hidden>
+                </div>                
+            </form>
+        </div>        
+    </div>
+
+    <div id="divTblCliente" class="divTabla">
+        <label for="chkEliminados">
+            <input type="checkbox" id="chkEliminados" name="chkEliminados" onclick="listarClientes()"> MOSTAR ELIMINADOS
+        </label>
+        <table id="tblListaCliente"  class="tbmListado">
+            <thead id="tblHeadCliente">
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>TELEFONO</th>
+                    <th>EMAIL</th>
+                    <th>DIRECCION</th>
+                    <th colspan="2">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody id="tblBodyCliente">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+        }
+    </script>
+    <script type="text/javascript" src="./js/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="./js/cliente.js"></script>
+    <script type="text/javascript" src="./js/login.js"></script>  
+</body>
+
+</html>
