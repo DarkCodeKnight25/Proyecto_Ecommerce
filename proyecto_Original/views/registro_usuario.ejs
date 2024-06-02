@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/standar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+      <%- include("template/navbar_Facturacion", {tituloweb: 'Registro de Usuario'})%>
+    </header>
+    <div class="box-title">
+      <h1>REGISTRAR USUARIOS</h1>
+    </div>
+    <div id="divFrmUsuario" class="divFormulario">
+      <div class="padding-horizontal--48">
+        
+        <form action="#">
+          <input type="text" id="txtId" name="txtId" hidden />
+          <div class="campos padding-top--24">
+            <label for="txtUsuario">Usuario</label>
+            <input type="text" id="txtUsuario" name="txtUsuario" placeholder="Usuario Login" required/>
+          </div>
+          <div class="campos padding-top--24">
+            <label for="txtPrecio">Password</label>
+            <div class="input-icon">
+              <input type="password" id="txtPassword" name="txtPassword" placeholder="Ingresar tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres" required/>
+              <i class="fa fa-eye" id="togglePassword"></i>
+            </div>
+          </div>
+          <div id="mensaje">
+            <h4>La contraseña debe contener lo siguiente:</h4>
+            <p id="letter" class="invalido">Una letra <b>minúscula</b></p>
+            <p id="capital" class="invalido">Una letra <b>mayúscula</b></p>
+            <p id="number" class="invalido">Un <b>número</b></p>
+            <p id="length" class="invalido">Mínimo <b>8 caracteres</b></p>
+          </div>
+          <div class="campos campos-checkbox padding-top--24">
+            <label for="cboEstado">
+              <input type="checkbox" id="chkEstado" name="chkEstado" />Estado
+            </label>
+          </div>
+          <div id="grabar" class="campos padding-top--24">
+            <input type="button" id="btnGrabar" onclick="guardarUsuario();" value="GRABAR"/>
+          </div>
+          <div id="actualizar" class="campos padding-top--24">
+            <input type="button" id="btnActualizar" onclick="actualizarUsuario();" value="ACTUALIZAR" hidden/>
+          </div>          
+        </form>
+      </div>      
+    </div>
+    <div id="divTblUsuario" class="divTabla">
+      <label for="chkEliminados">
+        <input type="checkbox" id="chkEliminados" name="chkEliminados" onclick="listarUsuario()"/> MOSTRAR ELIMINADOS
+      </label>
+      <table id="tblListaUsuario" class="tbmListado">
+        <thead id="tblHeadUsuario">
+          <tr>
+            <th>ID</th>
+            <th>USUARIO</th>
+            <th>PASSWORD</th>
+            <th>ESTADO</th>
+            <th colspan="2">ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody id="tblBodyUsuario"></tbody>
+      </table>
+    </div>
+    <script type="text/javascript" src="./js/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="./js/usuario.js"></script>
+    <script type="text/javascript" src="./js/validation.js"></script>
+  </body>
+</html>

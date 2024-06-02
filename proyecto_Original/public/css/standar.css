@@ -1,0 +1,363 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #1a1f36;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
+  }
+
+  body {
+      min-height: 100%;
+      background-color: #ffffff;
+  }
+
+  .flex-flex {
+    display: flex;
+  }
+
+    /*----------------------------------------------------------------*/
+    /*---------------- Estilos de Login Sistema ----------------------*/
+    /*----------------------------------------------------------------*/
+
+    .box-title {
+        box-sizing: border-box;
+        padding-top: 75px;
+        padding-bottom: 24px;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .box-title img {
+      width: 450px;
+      height: auto;
+    }
+    .divFrmLogin {
+        padding: 10px;
+        margin: 0px auto;
+        width: 100%;
+        max-width: 500px;
+        background: white;
+        border-radius: 4px;
+        box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;  
+    }
+    .padding--48 {
+        padding: 48px;
+    }
+    span {
+        display: block;
+        font-size: 20px;
+        line-height: 28px;
+        color: #1a1f36;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    a {
+        color: #5469d4;
+        text-decoration: unset;
+      }
+    a:hover {
+      color: rgba(255, 0, 0)
+    }
+    .reset-pass > a {
+        text-align: right;
+        margin-bottom: 10px;
+    }
+    .grid--50-50 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+    }
+    a.ssolink {
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      padding-top: 25px;
+    }
+
+    /*----------------------------------------------------------------*/
+    /*----------------- Estilos del Formulario -----------------------*/
+    /*----------------------------------------------------------------*/
+
+  .divFormulario, .divTabla {
+    padding: 10px;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1100px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;  
+  }
+  h1 {
+    text-align: center;
+    letter-spacing: -1px;
+    color: #5469d4;
+    text-decoration: unset;
+  }
+  label {
+    margin-bottom: 10px;
+}
+
+  .fila {
+    width: 100%;
+  }
+  .fila .campos {
+    width: 50%;
+  }
+  .reset-pass a, label {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+  }
+  .padding-top--24 {
+    padding-top: 14px;
+  }
+  .padding-right--20 {
+    padding-right: 20px;
+  }
+  .padding-horizontal--48 {
+    padding: 30px 48px 10px 48px;
+}
+  .campos input, .campos select {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 8px 16px;
+    width: 100%;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: rgb(84 105 212 / 0.5);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    }
+    .campos-checkbox {
+        display: flex;
+        align-items: center;
+    }
+    .campos-checkbox input {
+        width: 20px;
+        height: 15px;
+        margin-right: 5px;         
+        box-shadow: unset;
+        min-height: unset;
+    }
+    .campos-checkbox label {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    #grabar input[type="button"] {
+        background-color: rgb(24, 135, 84);
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                    rgb(24, 135, 84) 0px 0px 0px 1px, 
+                    rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    #actualizar input[type="button"] {
+        background-color: rgb(13, 110, 253);
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                    rgb(13, 110, 253) 0px 0px 0px 1px, 
+                    rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                    rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .input-icon {
+      position: relative;
+      width: 100%;
+    }
+    /*------------- Estilos para la contraseña ---------------------*/
+    #togglePassword {
+      cursor: pointer;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #mensaje {
+      display:none;
+      background: #f1f1f1;
+      color: #000;
+      position: relative;
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+    
+    #mensaje p {
+      padding: 5px 35px;
+      font-size: 15px;
+    }
+    
+    .valido {
+      color: green;
+    }
+    
+    .valido:before {
+      position: relative;
+      left: -35px;
+      content: "✔";
+    }
+    
+    .invalido {
+      color: red;
+    }
+    
+    .invalido:before {
+      position: relative;
+      left: -35px;
+      content: "✖";
+    }
+
+    /*----------------------------------------------------------------*/
+    /*------------- Estilos de la tabla de datos ---------------------*/
+    /*----------------------------------------------------------------*/
+
+    .tbmListado {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .center {
+        text-align: center;
+    }
+    .right {
+        text-align: right;
+    }
+    .tbmListado td, .tbmListado th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    
+    .tbmListado tr:nth-child(even){background-color: #f2f2f2;}
+    
+    .tbmListado tr:hover {background-color: #ddd;}
+    
+    .tbmListado th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: rgb(33, 36, 41);
+        color: white;
+    }
+
+    .bg-actualizar a:link, .bg-actualizar a:visited {
+        background-color: rgb(13, 202, 240);
+        color: rgb(33, 36, 41);
+        border: 2px solid rgb(33, 36, 41);
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .bg-actualizar a:hover, .bg-actualizar a:active {
+        background-color: rgb(255, 255, 255);
+    }
+    .bg-actualizar a i {
+        color: rgb(33, 36, 41);
+    }
+
+    .bg-eliminar a:link, .bg-eliminar a:visited {
+        background-color: rgb(220, 53, 70);
+        color: rgb(255, 255, 255);
+        border: 2px solid rgb(33, 36, 41);
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .bg-eliminar a:hover, .bg-eliminar a:active {
+        background-color: rgb(255, 255, 255);
+        color: rgb(220, 53, 70);
+        border: 2px solid rgb(220, 53, 70);
+    }
+    .bg-eliminar a i {
+        color: rgb(255, 255, 255);
+    }
+    .bg-eliminar a:hover i {
+        color: rgb(220, 53, 70);
+    }
+
+    /*----------------------------------------------------------------*/
+    /*------------------ Estilos de Navegación -----------------------*/
+    /*----------------------------------------------------------------*/
+
+    header {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+    }
+    .barra {
+        overflow: hidden;
+        background-color: #333;
+        display: flex;
+        padding: 0px 25px;        
+      }
+      
+      .barra a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .barra a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .barra a.active {
+        background-color: rgb(220, 53, 70);
+        color: white;
+      }
+      
+      .barra .icon {
+        display: none;
+      }
+      
+      @media screen and (max-width: 600px) {
+        .barra a:not(:first-child) {display: none;}
+        .barra a.icon {
+          float: right;
+          display: block;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        .barra.responsive {position: relative;}
+        .barra.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .barra.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+

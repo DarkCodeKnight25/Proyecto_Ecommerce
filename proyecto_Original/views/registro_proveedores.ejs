@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/standar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+        <%- include("template/navbar_Facturacion", {tituloweb: 'Registro de Proveedores'})%>
+    </header>
+    <div class="box-title">
+      <h1>REGISTRAR PROVEEDORES</h1>
+    </div>
+    <div id="divFrmUsuario" class="divFormulario">
+      <div class="padding-horizontal--48">
+        
+        <form action="#">
+          <input type="text" id="txtId" name="txtId" hidden />
+
+          <div class="campos padding-top--24">
+            <label for="txtNombre">Nombre</label>
+            <input type="text" id="txtNombre" name="txtNombre" placeholder="Ingrese su nombre" />
+          </div>
+
+          <div class="campos padding-top--24">
+            <label for="txtDireccion">Direccion</label>
+            <input type="text" id="txtDireccion" name="txtDireccion" placeholder="Ingrese su direccion" />
+          </div>
+
+          <div class="campos padding-top--24">
+            <label for="txtRazon">Razon</label>
+            <input type="text" id="txtRazon" name="txtRazon" placeholder="Ingrese razon " />
+          </div>
+
+          <div class="campos campos-checkbox padding-top--24">
+            <label for="cboEstado">
+              <input type="checkbox" id="chkEstado" name="chkEstado" />Estado
+            </label>
+          </div>
+          <div id="grabar" class="campos padding-top--24">
+            <input type="button" id="btnGrabar" onclick="guardarProveedores();" value="GRABAR"/>
+          </div>
+          <div id="actualizar" class="campos padding-top--24">
+            <input type="button" id="btnActualizar" onclick="actualizarProveedores();" value="ACTUALIZAR" hidden/>
+          </div>          
+        </form>
+      </div>      
+    </div>
+    <div id="divTblProveedores" class="divTabla">
+      <label for="chkEliminados">
+        <input type="checkbox" id="chkEliminados" name="chkEliminados" onclick="listarProveedores()"/> MOSTRAR ELIMINADOS
+      </label>
+      <table id="tblListaProveedores" class="tbmListado">
+        <thead id="tblHeadUsuario">
+          <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>DIRECCION</th>
+            <th>RAZON SOCIAL</th>
+            <th>ESTADO</th>
+            <th colspan="2">ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody id="tblBodyProveedores"></tbody>
+      </table>
+    </div>
+    <script>
+      function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+          x.className += " responsive";
+          } else {
+          x.className = "topnav";
+          }
+      }
+  </script>
+    <script type="text/javascript" src="./js/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="./js/proveedores.js"></script>
+  </body>
+</html>

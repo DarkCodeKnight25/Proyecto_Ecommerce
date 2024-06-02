@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/standar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+      <%- include("template/navbar_Facturacion", {tituloweb: 'Registro de Pedido'})%>
+    </header>
+    <div class="box-title">
+        <h1>GESTIÓN DE PEDIDOS</h1>
+      </div>
+      <div id="divFrmPedido" class="divFormulario">
+        <div class="padding-horizontal--48">
+          
+          <form action="#">
+            <input type="text" id="txtId" name="txtId" hidden />
+            <div class="campos padding-top--24">
+              <label for="txtFechaEntrega">Fecha de Entrega</label>
+              <input type="text" id="txtFechaEntrega" name="txtFechaEntrega" placeholder="Fecha de entrega" />
+            </div>
+            <div class="campos padding-top--24">
+              <label for="txtCliente">Cliente</label>
+              <input type="text" id="txtCliente" name="txtCliente" placeholder="Nombre del cliente" />
+            </div>
+            <div class="campos padding-top--24">
+              <label for="txtDireccion">Dirección</label>
+              <input type="text" id="txtDireccion" name="txtDireccion" placeholder="Dirección del cliente" />
+            </div>
+            <div class="campos padding-top--24">
+              <label for="txtDescripcion">Descripción</label>
+              <input type="text" id="txtDescripcion" name="txtDescripcion" placeholder="Descripción del pedido" />
+            </div>
+            <div class="campos campos-checkbox padding-top--24">
+              <label for="cboEstado">
+                <input type="checkbox" id="chkEstado" name="chkEstado" />Estado
+              </label>
+            </div>
+            <div id="grabar" class="campos padding-top--24">
+              <input type="button" id="btnGrabar" onclick="guardarPedido();" value="GRABAR"/>
+            </div>
+            <div id="actualizar" class="campos padding-top--24">
+              <input type="button" id="btnActualizar" onclick="actualizarPedido();" value="ACTUALIZAR" hidden/>
+            </div>          
+          </form>
+        </div>      
+      </div>
+    <div id="divTblPedido" class="divTabla">
+      <label for="chkEliminados">
+        <input type="checkbox" id="chkEliminados" name="chkEliminados" onclick="listarPedido()"/> MOSTRAR ELIMINADOS
+      </label>
+      <table id="tblListaPedido" class="tbmListado">
+        <thead id="tblHeadPedido">
+          <tr>
+            <th>IDPEDIDO</th>
+            <th>FECHA DE ENTREGA</th>
+            <th>CLIENTE</th>
+            <th>DIRECCION</th>
+            <th>DESCRIPCION</th>
+            <th>ESTADO</th>
+            <th colspan="2">ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody id="tblBodyPedido"></tbody>
+      </table>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+        }
+    </script>
+    <script type="text/javascript" src="./js/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="./js/pedido.js"></script>
+  </body>
+</html>

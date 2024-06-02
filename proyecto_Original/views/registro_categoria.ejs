@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/standar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+      <%- include("template/navbar_Facturacion", {tituloweb: 'Registro de Categoria'})%>
+    </header>
+    <div class="box-title">
+      <h1>REGISTRAR CATEGORIAS</h1>
+    </div>
+    <div id="divFrmCategoria" class="divFormulario">
+      <div class="padding-horizontal--48">
+        
+        <form action="#">
+          <input type="text" id="txtId" name="txtId" hidden />
+          <div class="campos padding-top--24">
+            <label for="txtNomCat">Nombre Categoria</label>
+            <input type="text" id="txtNomCat" name="txtNomCat" placeholder="Nombre de la Categoria" />
+          </div>
+          <div class="campos campos-checkbox padding-top--24">
+            <label for="cboEstado">
+              <input type="checkbox" id="chkEstado" name="chkEstado" />Estado
+            </label>
+          </div>
+          <div id="grabar" class="campos padding-top--24">
+            <input type="button" id="btnGrabar" onclick="guardarCategoria();" value="GRABAR"/>
+          </div>
+          <div id="actualizar" class="campos padding-top--24">
+            <input type="button" id="btnActualizar" onclick="actualizarCategoria();" value="ACTUALIZAR" hidden/>
+          </div>          
+        </form>
+      </div>      
+    </div>
+    <div id="divTblCategoria" class="divTabla">
+      <label for="chkEliminados">
+        <input type="checkbox" id="chkEliminados" name="chkEliminados" onclick="listarCategoria()"/> MOSTRAR ELIMINADOS
+      </label>
+      <table id="tblListaCategoria" class="tbmListado">
+        <thead id="tblHeadCategoria">
+          <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>ESTADO</th>
+            <th colspan="2">ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody id="tblBodyCategoria"></tbody>
+      </table>
+    </div>
+    <script>
+      /*
+      const togglePassword = document.querySelector('#togglePassword');
+      const password = document.querySelector('#txtPassword');
+      togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+      })
+      */;
+      function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+          x.className += " responsive";
+          } else {
+          x.className = "topnav";
+          }
+      }
+    </script>
+    <script type="text/javascript" src="./js/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="./js/categoria.js"></script>
+  </body>
+</html>

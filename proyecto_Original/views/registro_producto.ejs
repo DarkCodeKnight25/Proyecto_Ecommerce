@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/standar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+    <header>
+        <%- include("template/navbar_Facturacion", {tituloweb: 'Registro de Producto'})%>
+    </header>
+    
+    <div class="box-title">
+        <h1>REGISTRAR PRODUCTOS</h1>
+    </div>
+    <div id="divFrmProducto" class="divFormulario">
+        <div class="padding-horizontal--48">
+            
+            <form action="#" enctype="multipart/form-data">
+                <input type="text" id="txtId" name="txtId" hidden>
+                <div class="campos padding-top--24">
+                    <label for="txtNombre">Nombre del Producto :</label>
+                    <input type="text" id="txtNombre" name="txtNombre" placeholder="Nombre del Producto" required />
+                </div>
+
+                <div class="fila flex-flex">
+                    <div class="campos padding-top--24 padding-right--20">
+                        <label for="selProveedores">Proveedor :</label>
+                        <select id="selProveedores" name="selProveedores">
+    
+                        </select>
+                    </div>
+                    <div class="campos padding-top--24">
+                        <label for="foto">Foto :</label>
+                        <input type="file" id="name_file" name="name_file" required />
+                    </div>
+                </div>
+
+                <div class="fila flex-flex">
+                    <div class="campos padding-top--24 padding-right--20">
+                        <label for="txtMarca">Marca :</label>
+                        <input type="text" id="txtMarca" name="txtMarca" placeholder="Marca del Producto" />
+                    </div>
+                    <div class="campos padding-top--24 padding-right--20">
+                        <label for="txtModelo">Modelo :</label>
+                        <input type="text" id="txtModelo" name="txtModelo" placeholder="Modelo del Producto" />
+                    </div>
+                    <div class="campos padding-top--24">
+                        <label for="txtColor">Color :</label>
+                        <input type="text" id="txtColor" name="txtColor" placeholder="Color del Producto" />
+                    </div>                    
+                </div>
+
+                <div class="fila flex-flex">
+                    <div class="campos padding-top--24 padding-right--20">
+                        <label for="txtCosto">Costo :</label>
+                        <input type="number" id="txtCosto" name="txtCosto" placeholder="Costo S/ 0.00" required />
+                    </div>
+                    <div class="campos padding-top--24  padding-right--20">
+                        <label for="txtPrecio">Precio :</label>
+                        <input type="number" id="txtPrecio" name="txtPrecio" placeholder="Precio S/ 0.00" required />
+                    </div>
+                    <div class="campos padding-top--24">
+                        <label for="txtStock">Stock :</label>
+                        <input type="number" id="txtStock" name="txtStock" placeholder="Inventario Inicial" required />
+                    </div>
+                </div>                
+                
+                <div class="campos campos-checkbox padding-top--24">
+                    <label for="cboEstado">
+                        <input type="checkbox" id="chkEstado" name="chkEstado"> Estado
+                    </label>
+                </div>
+                <div class="campos padding-top--24">
+                    <label for="txtDescripcion">Descripción :</label>
+                    <input type="text" id="txtDescripcion" name="txtDescripcion" placeholder="Caracteristcas del Producto" required />
+                </div>
+                <div id="grabar" class="campos padding-top--24">
+                    <input type="button" id="btnGrabar" onclick="guardarProducto();" value="GRABAR">
+                </div>
+                <div id="actualizar" class="campos padding-top--24">
+                    <input type="button" id="btnActualizar" onclick="actualizarProducto();" value="ACTUALIZAR" hidden>
+                </div>            
+            </form>
+        </div>
+    </div>
+    <div id="divTblProducto" class="divTabla">
+        <label for="chkEliminados">
+            <input type="checkbox" id="chkEliminados" name="chkEliminados" onclick="listarProducto()"> MOSTRAR ELIMINADOS
+        </label>
+        <table id="tblListaProductos" class="tbmListado">
+            <thead id="tblHeadProducto">
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>MARCA</th>
+                    <th>Costo S/</th>
+                    <th>Precio S/</th>
+                    <th>STOCK</th>
+                    <th colspan="2">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody id="tblBodyProducto">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+        }
+    </script>
+    <script type="text/javascript" src="./js/jquery-3.7.0.min.js"></script>    
+    <script type="text/javascript" src="./js/producto.js"></script>
+    <script type="text/javascript" src="./js/login.js"></script>  
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           
+        })     
+           
+    </script>
+</body>
+
+</html>
